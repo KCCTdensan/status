@@ -1,0 +1,6 @@
+{
+  "semi": false,
+  "arrowParens": "avoid",
+  "bracketSameLine": true,
+  "plugins": ["prettier-plugin-prisma"]
+}
