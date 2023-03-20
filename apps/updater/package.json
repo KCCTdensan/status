@@ -1,0 +1,23 @@
+{
+  "name": "updater",
+  "version": "0.1.0",
+  "dependencies": {
+    "db": "workspace:*",
+    "node-cron": "3.0.2"
+  },
+  "devDependencies": {
+    "@types/node-cron": "3.0.7"
+  },
+  "scripts": {
+    "build": "tsup --minify",
+    "dev": "tsup --watch --onSuccess 'node dist'",
+    "start": "node dist"
+  },
+  "tsup": {
+    "entry": [
+      "src/index.ts"
+    ],
+    "sourcemap": true,
+    "clean": true
+  }
+}

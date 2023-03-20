@@ -1,0 +1,28 @@
+.badge {
+  padding: 0.2em 0.8em;
+  border: 4px solid gold;
+  border-radius: 100vh;
+  font-weight: bold;
+  font-family: monospace;
+  line-height: normal;
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    background: gold;
+    color: black;
+  }
+}
+
+.row {
+  display: flex;
+  align-items: baseline;
+
+  & > * + * {
+    margin-left: 1rem;
+  }
+}
+
+.footer {
+  margin-top: 2rem;
+  text-align: center;
+}

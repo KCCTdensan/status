@@ -1,0 +1,24 @@
+{
+  "name": "status",
+  "devDependencies": {
+    "@types/node": "18.15.3",
+    "eslint": "8.36.0",
+    "eslint-config-next": "13.2.4",
+    "eslint-config-prettier": "8.7.0",
+    "eslint-plugin-simple-import-sort": "10.0.0",
+    "prettier": "2.8.4",
+    "tsup": "6.6.3",
+    "turbo": "1.8.3",
+    "typescript": "4.9.5"
+  },
+  "packageManager": "pnpm@7.30.0",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "fmt": "prettier -w '**/*.{ts,tsx}'",
+    "lint": "turbo lint",
+    "push": "turbo push",
+    "studio": "turbo studio"
+  }
+}

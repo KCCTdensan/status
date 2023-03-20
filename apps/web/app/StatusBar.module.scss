@@ -1,0 +1,48 @@
+.bar {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  right: 0;
+  justify-content: flex-end;
+
+  padding: 6px;
+  border-radius: 8px;
+  border: 1px solid gray;
+}
+
+.cell {
+  width: 16px;
+  height: 64px;
+  border-radius: 4px;
+  transition: all 0.1s ease;
+  cursor: pointer;
+
+  & + * {
+    margin-left: 8px;
+  }
+
+  &.ok {
+    background: lime;
+    &:hover {
+      background: limegreen;
+    }
+  }
+
+  &.warn {
+    background: orange;
+    &:hover {
+      background: peru;
+    }
+  }
+
+  &.bad {
+    background: red;
+    &:hover {
+      background: brown;
+    }
+  }
+
+  &.na {
+    background: dimgray;
+  }
+}

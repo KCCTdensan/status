@@ -1,0 +1,30 @@
+{
+  "name": "db",
+  "dependencies": {
+    "@prisma/client": "4.11.0"
+  },
+  "devDependencies": {
+    "prisma": "4.11.0"
+  },
+  "main": "./dist/index.js",
+  "private": true,
+  "scripts": {
+    "build": "tsup --minify",
+    "dev": "tsup --watch",
+    "gen": "prisma generate",
+    "prebuild": "npm run gen",
+    "predev": "npm run gen",
+    "prepush": "npm run gen",
+    "push": "prisma db push",
+    "studio": "prisma studio"
+  },
+  "tsup": {
+    "entry": [
+      "index.ts"
+    ],
+    "sourcemap": true,
+    "dts": true,
+    "clean": true
+  },
+  "types": "./dist/index.d.ts"
+}

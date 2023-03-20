@@ -1,0 +1,21 @@
+{
+  "name": "utils",
+  "dependencies": {
+    "array.prototype.group": "1.1.2"
+  },
+  "main": "./dist/index.js",
+  "private": true,
+  "scripts": {
+    "build": "tsup --minify",
+    "dev": "tsup --watch"
+  },
+  "tsup": {
+    "entry": [
+      "index.ts"
+    ],
+    "sourcemap": true,
+    "dts": true,
+    "clean": true
+  },
+  "types": "./dist/index.d.ts"
+}
