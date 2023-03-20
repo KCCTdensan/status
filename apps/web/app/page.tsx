@@ -5,6 +5,8 @@ import { exclude } from "utils"
 import styles from "./page.module.scss"
 import StatusBar from "./StatusBar"
 
+export const revalidate = 60
+
 async function getData() {
   const mikkamae = new Date(Date.now() - 1000 * 60 * 60 * 24 * 3)
 
@@ -47,11 +49,11 @@ export default async function IndexPage() {
   return (
     <main className={styles.main}>
       <h2>ほげほげ</h2>
-      <b>
-        なんとアメリカから監視しています。
-        <br />
-        こっち→に行くほど最新
-      </b>
+      <ul className={styles.bold}>
+        <li>なんとアメリカから監視しています。</li>
+        <li>PCでご覧ください。</li>
+        <li>こっち→に行くほど最新</li>
+      </ul>
 
       {rawStatuses.map(({ target, statuses }, i) => (
         <Fragment key={i}>

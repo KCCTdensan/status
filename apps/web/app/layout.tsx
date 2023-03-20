@@ -3,7 +3,7 @@ import "./global.scss"
 import { Zen_Kaku_Gothic_New } from "next/font/google"
 import { ReactNode } from "react"
 
-import { version } from "../package.json"
+import { default as pkg } from "../package.json"
 import styles from "./layout.module.scss"
 
 const zkgn = Zen_Kaku_Gothic_New({
@@ -14,6 +14,13 @@ const zkgn = Zen_Kaku_Gothic_New({
 export const metadata = {
   title: "status",
   description: "KCCT status",
+  openGraph: {
+    title: "status",
+    images: [{ url: "https://status.d3bu.net/icon.png" }],
+  },
+  twitter: {
+    card: "summary",
+  },
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -27,7 +34,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <a
               className={styles.badge}
               href="https://github.com/KCCTdensan/status/">
-              v{version}
+              v{pkg.version}
             </a>
           </div>
         </header>
